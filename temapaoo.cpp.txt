@@ -58,7 +58,8 @@ public:
         this->name = aux.name;
         this->population = aux.population;
         costOfLife = aux.costOfLife;
-        cout << "copy constructor city"<< endl;
+        cout << "copy constructor city";
+         cout << endl;
     }*/
     
     ~City()
