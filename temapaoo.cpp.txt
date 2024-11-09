@@ -59,14 +59,15 @@ public:
         this->population = aux.population;
         costOfLife = aux.costOfLife;
         cout << "copy constructor city";
-         cout << endl;
+        cout << endl;
     }*/
     
     ~City()
     {
         delete name;
         delete population;
-        cout<<"Destructor for City called" << endl;
+        cout<<"Destructor for City called";
+        cout<<endl;
     }
     
     int getCostOfLife() { 
