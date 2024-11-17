@@ -1,0 +1,3 @@
+/home/alex/_tema/build1/CMakeFiles/rebuild_cache.dir
+/home/alex/_tema/build1/CMakeFiles/edit_cache.dir
+/home/alex/_tema/build1/CMakeFiles/t.dir
