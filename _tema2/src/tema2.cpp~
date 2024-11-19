@@ -15,19 +15,19 @@ public:
 	}
 
     //calls default constructor
-    Breakfast() = default;
+	Breakfast() = default;
 
     //deleted both copy constructor and copy assignment operator:
     Breakfast(const Breakfast&) = delete;
     Breakfast& operator = (const Breakfast&) = delete;
 	
-    //calls destructor
-    ~Breakfast()
+	//calls destructor
+	~Breakfast()
 	{
 	    cout<< menu << "has been destroyed" << endl;
 	}
 	
-    void get()
+	void get()
 	{
 	  cout<<"("<<menu<<"; "<<nrAlergens<<(")")<<endl;
 	}
