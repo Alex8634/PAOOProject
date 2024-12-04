@@ -20,7 +20,7 @@ public:
         cout << "Assigning person operator: " << other.name << "\n";
         
         if (this == &other) {
-            std::cout << "Assignment to self.\n";
+            cout << "Assignment to self.\n";
             return *this;
         }
 
