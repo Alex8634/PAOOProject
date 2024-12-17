@@ -28,23 +28,6 @@ public:
         }
     }
 
-    FExplorer(const FExplorer& other)
-        : fileName(other.fileName), file(new fstream(other.fileName, ios::in | ios::out)) {
-        if (!file->is_open()) {
-            throw runtime_error("Fail in copy constructor: " + fileName);
-        }
-    }
-
-    FExplorer& operator=(FExplorer other) {
-        if (this != &other) {
-            if (file->is_open()) {
-                file->close();
-            }
-            file = std::move(other.file);
-        }
-        return *this;
-    }
-
     void writeToFile(const string& data) {
         if (file && file->is_open()) {
             *file << data << "\n";
@@ -74,14 +57,6 @@ int main() {
         file1.writeToFile("1");
         file1.writeToFile("2");
         file1.readFromFile();
-
-        FExplorer file2 = file1;
-        file2.writeToFile("3");
-        file2.readFromFile();
-
-        FExplorer file3("ex2.txt", ios::in);
-        file3 = file1;
-        file3.readFromFile();
 
     return 0;
 }
